@@ -1,6 +1,6 @@
 #!/bin/ksh
 #!/usr/bin/ksh
-# bron: unix2004:/usr/local/bin»cat sb_cln_grw
+# bron: unix2004:/usr/local/binï¿½cat sb_cln_grw
 ################################################################
 # Module    : sb_cln_grw
 # Doel      : Algemeen script tbv onderhoud groei-objecten AIX
@@ -20,6 +20,11 @@
 # Auteur      : Ivo Breeden
 # Versie      : 1.2
 # Omschrijving: Spaces in filenames are now handeled correctly.
+################################################################
+# Date       : 15-june-2016
+# Autho      : Anibal Ojeda
+# Version    : 1.3
+# Descrition : Changes to English 
 ################################################################
 # Usage: sb_cln_grw -a{a|e|h|s|z} -d -n<num> -p<pattern> -s<source> [-t<target>] [-x]
 #
@@ -56,7 +61,7 @@
 #  Reduceer /appl/xxx00t/log/big_logfile tot de laatste 10000 regels
 #  sb_cln_grw -as -n10000 -s/appl/xxx00t/log/big_logfile -x
 #
-#  Zip alle bestanden ouder dan 45 dagen in /appl/yyy00p/log 
+#  Zip alle bestanden ouder dan 45 dagen in /appl/yyy00p/log
 #  sb_cln_grw -az -n45 -s/appl/xxx00t/log -x
 #
 ################################################################

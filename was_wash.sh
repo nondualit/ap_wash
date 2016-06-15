@@ -44,6 +44,7 @@
 #    1.08  02-09-2015  Ivo Breeden       Aangepast voor algemeen gebruik, dus
 #                                        niet meer voor WAS. $wasid veranderd
 #                                        in LOGNAME.
+#    2.00   15-06-20176 Anibal Ojeda      Diverse verbeteringen
 #*******************************************************************************
 # was_wash.sh is a front-end for the general cleanup script sb_cln_grw
 ################################################################

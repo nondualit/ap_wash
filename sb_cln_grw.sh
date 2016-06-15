@@ -1,6 +1,6 @@
 #!/bin/ksh
 #!/usr/bin/ksh
-# bron: unix2004:/usr/local/bin�cat sb_cln_grw
+# bron: unix2004:/usr/local/bin >> cat sb_cln_grw
 ################################################################
 # Module    : sb_cln_grw
 # Doel      : Algemeen script tbv onderhoud groei-objecten AIX
@@ -24,7 +24,7 @@
 # Date       : 15-june-2016
 # Autho      : Anibal Ojeda
 # Version    : 1.3
-# Descrition : Changes to English 
+# Descrition : Changes to English
 ################################################################
 # Usage: sb_cln_grw -a{a|e|h|s|z} -d -n<num> -p<pattern> -s<source> [-t<target>] [-x]
 #

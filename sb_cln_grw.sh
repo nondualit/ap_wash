@@ -3,26 +3,23 @@
 # bron: unix2004:/usr/local/bin >> cat sb_cln_grw
 ################################################################
 # Module    : sb_cln_grw
-# Doel      : Algemeen script tbv onderhoud groei-objecten AIX
-# Auteur    : G. Mosterd
-# Datum     : Thu Jan 25 08:22:01 NFT 2007
+# Author    : G. Mosterd
+# Date      : Thu Jan 25 08:22:01 NFT 2007
 ################################################################
-# Omschrijving:
+# Modifications
 ################################################################
-# Wijzigingen
+# Date v      : 24-feb-2011
+# Author      : Ivo Breeden
+# Version     : 1.1
+# Description : Add: option z=zip files. (using gzip)
 ################################################################
-# Datum       : 24-feb-2011
-# Auteur      : Ivo Breeden
-# Versie      : 1.1
-# Omschrijving: Add: option z=zip files. (using gzip)
-################################################################
-# Datum       : 11-mar-2011
-# Auteur      : Ivo Breeden
-# Versie      : 1.2
-# Omschrijving: Spaces in filenames are now handeled correctly.
+# Date        : 11-mar-2011
+# Author      : Ivo Breeden
+# Version     : 1.2
+# Descrition  : Spaces in filenames are now handeled correctly.
 ################################################################
 # Date       : 15-june-2016
-# Autho      : Anibal Ojeda
+# Author     : Anibal Ojeda
 # Version    : 1.3
 # Descrition : Changes to English
 ################################################################

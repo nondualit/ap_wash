@@ -3,7 +3,7 @@
 # D e s c r i p t i o n
 #*******************************************************************************
 # Scriptname     : was_wash.sh
-# Current version: 1.07
+# Current version: 2.0
 # Function       : Clean old logfiles.
 #                  First old logfiles are gzipped,
 #                  then very old files are deleted.
@@ -44,7 +44,7 @@
 #    1.08  02-09-2015  Ivo Breeden       Aangepast voor algemeen gebruik, dus
 #                                        niet meer voor WAS. $wasid veranderd
 #                                        in LOGNAME.
-#    2.00   15-06-20176 Anibal Ojeda      Diverse verbeteringen
+#    2.00   15-06-20176 Anibal Ojeda     Making translation to English
 #*******************************************************************************
 # was_wash.sh is a front-end for the general cleanup script sb_cln_grw
 ################################################################
@@ -93,7 +93,7 @@ fi
 # non_recursive_du() shows disk usage (du) of a directory
 #                    without de subdirectories in bytes
 #                    Only regular files are counted,
-#                    not symbolic links, directories, 
+#                    not symbolic links, directories,
 #                    special files or hidden files (whose
 #                    name starts with '.').
 # explanation:
@@ -103,15 +103,15 @@ fi
 #
 function non_recursive_du {
   ls -l $1 |
-  awk 'BEGIN                   {resultaat=0} 
-       substr($1, 1, 1) == "-" {bytes=$5; resultaat+=bytes} 
+  awk 'BEGIN                   {resultaat=0}
+       substr($1, 1, 1) == "-" {bytes=$5; resultaat+=bytes}
        END                     {printf("%d\n", resultaat)}'
 }
 
 #
 ################################################################
 # Simple cleanup; cleanup files in one directory
-# Files, older than ${DELAGE} days are deleted. 
+# Files, older than ${DELAGE} days are deleted.
 # Files, older than ${ZIPAGE} days are zipped.
 #
 function wash_simple {
@@ -119,7 +119,7 @@ function wash_simple {
   ZIPAGE=${2}
   DELAGE=${3}
   if [ -z "${ZIPAGE}" ]
-  then 
+  then
     ZIPAGE=-1
   fi
   if [ -z "${DELAGE}" ]
@@ -173,7 +173,7 @@ function wash_simple {
 
 #
 ################################################################
-# Recursive cleanup; cleanup files in subdirectories. 
+# Recursive cleanup; cleanup files in subdirectories.
 # (And te directory itself.) Delete empty directories.
 #
 function wash_recursive {
@@ -181,7 +181,7 @@ function wash_recursive {
   ZIPAGE=${2}
   DELAGE=${3}
   if [ -z "${ZIPAGE}" ]
-  then 
+  then
     ZIPAGE=-1
   fi
   if [ -z "${DELAGE}" ]
@@ -218,7 +218,7 @@ function wash_recursive {
 # Cleanup to maximum size: first old files are zipped.
 # Then as long as the maximum size is exceeded, the oldest
 # file is deleted.
-# Only regular files are counted, not symbolic links, directories, 
+# Only regular files are counted, not symbolic links, directories,
 # special files or hidden files (whose name starts with '.').
 #
 function wash_to_size {
@@ -226,7 +226,7 @@ function wash_to_size {
   ZIPAGE=${2}
   MAXSIZE=${3}
   if [ -z "${ZIPAGE}" ]
-  then 
+  then
     ZIPAGE=-1
   fi
   if [ -z "${MAXSIZE}" ]
@@ -321,7 +321,7 @@ function wash_touch {
 # Read the ini file
 #
 awk -F: 'substr($1, 1, 1) != "#" {printf "%s %s %s %s %s\n", $1, $2, $3, $4, $5}' ${linkdir}/${scriptpure}.ini |
-  while read Pwasid Paction Pzip Pdelete Pdirectory 
+  while read Pwasid Paction Pzip Pdelete Pdirectory
   do
     # process the line if this environment (LOGNAME) is addressed
     if (( $(expr length ${LOGNAME}) == $(expr match ${LOGNAME} "${Pwasid}") ))
@@ -349,4 +349,3 @@ awk -F: 'substr($1, 1, 1) != "#" {printf "%s %s %s %s %s\n", $1, $2, $3, $4, $5}
 #
 # End Script
 ################################################################
-

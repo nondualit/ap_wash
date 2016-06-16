@@ -17,9 +17,10 @@ Dit script kan worden opgenomen op de wasstop/start scripts van WebSphere.
 Handleiding
 Usage: ~/was_wash  [-sim]
 Als de optie –sim wordt meegegeven, dan wordt een schoning gesimuleerd. In de logfile (waarvan de naam wordt getoond) staat een verslag van de commando’s die zouden worden uitgevoerd.
-Zonder opties wordt een schoning uitgevoerd. De naam van de logfile wordt getoond op het scherm (~/log/<datum>/<tijd>_was_wash.log).
+Zonder opties wordt een schoning uitgevoerd. De naam van de logfile wordt getoond op het scherm
 
 In dezelfde directory als waar was_wash.sh staat, moet ook een was_wash.ini staan. In die file wordt gedefiniëerd wat er geschoond wordt en hoe.
+
 # Info:     Regels die met een # beginnen zijn commentaar.
 #           Iedere regel bevat 5 velden, gescheiden door ":". De velden zijn:
 #
@@ -78,7 +79,7 @@ was02:S:  8: 365:/appl/was02${tgep}/sgl/data/transfer/in/smartbox
 was02:S:  8: 365:/appl/was02${tgep}/sgl/data/transfer/in/wvm
 was02:S:  8: 365:/appl/was02${tgep}/sgl/data/transfer/out/smartbox/processed
 was02:S:  8: 365:/appl/was02${tgep}/sgl/data/transfer/out/wvm/processed
-was02:S:  8: 365:/appl/was02${tgep}/sli/data/source/_archive
+was02:S:  8: 365:/appl/was02${tgep}/sli/data/source/archive
 
 
 Installatie handleiding
@@ -94,16 +95,16 @@ Bij alle andere WebSphere installaties (was03, was04 enz.) in de directory:
 
 Templaten is niet nodig. Het script was_wash.sh haalt zijn omgevingsvariabelen uit het bestaande script stoa_websphere_ini.sh.
 
-De logfiles zijn te vinden in ${HOME}/log/<datum>/<tijd>_was_wash.log.
+De logfiles zijn te vinden in ${HOME}/log/<datum>/<tijd>waswash.log.
 
 Automatisch start/stop van het script
 Maak en symbolic link naar het script in de home directory met de naam: was_wash.
 
-Pas de file _stopoptions.*.txt (in dezelfde directory als het was_wash.sh script) aan. Voeg de volgende regel toe:
+Pas de file stopoptions.*.txt (in dezelfde directory als het was_wash.sh script) aan. Voeg de volgende regel toe:
 •	WasWash                ${HOME}/was_wash
 
 
 
 Handmatig start van het script
 
-~/was_wash
+~/was_wash.sh

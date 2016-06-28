@@ -2,7 +2,7 @@
 #*******************************************************************************
 # D e s c r i p t i o n
 #*******************************************************************************
-# Scriptname     : was_wash.sh
+# Scriptname     : ap_wash.sh
 # Current version: 2.0
 # Function       : Clean old logfiles.
 #                  First old logfiles are gzipped,
@@ -46,7 +46,7 @@
 #                                        in LOGNAME.
 #    2.00   15-06-20176 Anibal Ojeda     Making translation to English
 #*******************************************************************************
-# was_wash.sh is a front-end for the general cleanup script sb_cln_grw
+# ap_wash.sh is a front-end for the general cleanup script sb_cln_grw
 ################################################################
 # Usage: sb_cln_grw -a{a|e|h|s|z} -d -n<num> -p<pattern> -s<source> [-t<target>] [-x]
 #
